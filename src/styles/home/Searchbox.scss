@@ -1,0 +1,33 @@
+.search {
+  position: relative;
+  margin-bottom: 3rem;
+
+  .search-icon {
+    position: absolute;
+    top: 20px;
+    left: 2rem;
+    color: $dark-gray;
+    width: 16px;
+    height: 16px;
+  }
+
+  .search-box {
+    height: 56px;
+    padding: 2rem 2rem 2rem 4rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: $shadow-box;
+    border-radius: 5px;
+    color: $dark-gray;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .search {
+    .search-box {
+      padding: 1rem 2rem 1rem 4rem;
+      width: 180%;
+    }
+  }
+}

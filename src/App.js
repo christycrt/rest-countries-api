@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.scss";
 
-function App() {
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import CountryDetail from "./page/CountryDetail";
+import Home from "./page/Home";
+import Navbar from "./components/Navbar";
+import { ThemeContext } from "./contexts/ThemeContext";
+import { useContext } from "react";
+
+const App = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${isDark ? "bg-secondary-dark text-dark" : ""}`}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="country">
+              <Route path=":code" element={<CountryDetail />} />
+            </Route>
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

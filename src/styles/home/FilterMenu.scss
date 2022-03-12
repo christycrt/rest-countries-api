@@ -1,0 +1,53 @@
+.filter-menu {
+  .css-1s2u09g-control,
+  .css-1pahdxg-control {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: $shadow-box;
+    width: 60%;
+    height: 56px;
+  }
+
+  .css-6j8wv5-Input {
+    color: $very-dark-blue;
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    display: none;
+  }
+
+  .css-26l3qy-menu {
+    width: 60%;
+    border: none;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+}
+
+.filter-menu-dark {
+  .css-1s2u09g-control,
+  .css-1pahdxg-control {
+    background-color: $dark-blue;
+    box-shadow: $dark-shadow-box;
+  }
+
+  .css-6j8wv5-Input {
+    color: $white !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filter-menu {
+    .css-1s2u09g-control,
+    .css-1pahdxg-control {
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      width: 195px;
+    }
+
+    .css-26l3qy-menu {
+      width: 195px;
+      border: none;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+  }
+}
