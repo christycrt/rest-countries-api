@@ -27,11 +27,16 @@
 .filter-menu-dark {
   .css-1s2u09g-control,
   .css-1pahdxg-control {
-    background-color: $dark-blue;
+    background-color: $dark-blue; 
     box-shadow: $dark-shadow-box;
   }
 
-  .css-6j8wv5-Input {
+  .css-14el2xx-placeholder {
+    color: $white !important;
+  }
+
+  .css-26l3qy-menu {
+    background-color: $dark-blue;
     color: $white !important;
   }
 }
